@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  dokken:
+    image: dokken
+    build:
+      dockerfile: _docker/Dockerfile
+      context: .
+    volumes:
+      - ./app:/dokken/app
+      - ./routes:/dokken/routes
+      - ./php-docker:/dokken/php-docker
+      - ./resources:/dokken/resources
+      - ./public:/dokken/public
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8080:80
+
+#  mysql:
+#    image: mariadb
+#    environment:
+#      MYSQL_DATABASE: laravel
+#      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+#    ports:
+#      - 3306:3306
