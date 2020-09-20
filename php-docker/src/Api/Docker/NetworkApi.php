@@ -24,6 +24,6 @@ class NetworkApi extends AbstractApi
      */
     public function inspect(string $id)
     {
-        return $this->fetch('/networks/' . $id);
+        return collect($this->exec('inspect', $id))->first();
     }
 }

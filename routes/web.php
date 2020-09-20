@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [DashboardController::class, 'index'])->name('home');
 
 Route::resource('dashboard', DashboardController::class)->only(['index']);
-Route::resource('nodes', NodeController::class)->only(['index']);
-Route::resource('services', ServiceController::class);
-Route::resource('networks', NetworkController::class);
-Route::resource('stacks', StackController::class);
+Route::resource('nodes', NodeController::class)->only(['index', 'show']);
+Route::resource('services', ServiceController::class)->only(['index', 'show']);
+Route::resource('networks', NetworkController::class)->only(['index', 'show']);
+Route::resource('stacks', StackController::class)->only(['index', 'show']);

@@ -23,7 +23,7 @@
                             <tbody>
                             @foreach ($items as $item)
                                 <tr>
-                                    <td><a href="#">{{ $item->ID }}</a>
+                                    <td><a href="{{ route('nodes.show', $item->ID) }}">{{ substr($item->ID, 0, 12) }}</a>
                                     <td>{{ $item->Hostname }}</td>
                                     <td>{{ $item->EngineVersion }}</td>
                                     <td>{{ $item->Status }}</td>
