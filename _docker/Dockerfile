@@ -27,7 +27,19 @@ COPY _docker/etc/nginx/ /etc/nginx/
 COPY _docker/etc/php/7.4/fpm/ /etc/php/7.4/fpm/
 COPY _docker/entrypoint.sh /entrypoint.sh
 
-COPY . /dokken
+COPY ./app /dokken/app
+COPY ./bootstrap /dokken/bootstrap
+COPY ./config /dokken/config
+COPY ./database /dokken/database
+COPY ./php-docker /dokken/php-docker
+COPY ./public /dokken/public
+COPY ./resources/views /dokken/resources/views
+COPY ./routes /dokken/routes
+COPY ./storage /dokken/storage
+COPY ./vendor /dokken/vendor
+COPY ./LICENSE /dokken/LICENSE
+# to be generated
+COPY ./.env /dokken/.env
 
 WORKDIR /dokken
 ENTRYPOINT ["/entrypoint.sh"]
