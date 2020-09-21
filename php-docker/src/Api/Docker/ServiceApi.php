@@ -30,4 +30,13 @@ class ServiceApi extends AbstractApi
     {
         return collect($this->exec('inspect', $id))->first();
     }
+
+    /**
+     * @param string $id
+     * @return Collection
+     */
+    public function ps(string $id)
+    {
+        return collect($this->withFormat()->exec('ps', $id));
+    }
 }
