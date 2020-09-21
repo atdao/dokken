@@ -59,16 +59,30 @@
                         </table>
                     </div>
                 </div>
-                @if (isset($item->Containers))
+                @if (count($tasks))
                     <div class="card mt-4">
-                        <h4 class="card-header">Containers</h4>
+                        <h4 class="card-header">Tasks</h4>
                         <div class="card-body">
                             <table class="table table-responsive-sm table-striped">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Node</th>
+                                    <th>CurrentState</th>
+                                    <th>DesiredState</th>
+                                    <th>Error</th>
+                                </tr>
+                                </thead>
                                 <tbody>
-                                @foreach($item->Containers as $container)
+                                @foreach($tasks as $task)
                                     <tr>
-                                        <td>{{ $container->Name }}</td>
-                                        <td>{{ $container->IPv4Address }}</td>
+                                        <td>{{ $task->ID }}</td>
+                                        <td>{{ $task->Name }}</td>
+                                        <td>{{ $task->Node }}</td>
+                                        <td>{{ $task->CurrentState }}</td>
+                                        <td>{{ $task->DesiredState }}</td>
+                                        <td>{{ $task->Error }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>

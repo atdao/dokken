@@ -19,7 +19,7 @@
             </a>
         </li>
         <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('nodes*') ? ' -cactive' : '' }}"
+            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('nodes*') ? ' c-active' : '' }}"
                href="{{ route('nodes.index') }}">
                 <i class="fas fa-project-diagram c-sidebar-nav-icon"></i>
                 Nodes

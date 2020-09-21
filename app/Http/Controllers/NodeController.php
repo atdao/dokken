@@ -50,6 +50,7 @@ class NodeController extends Controller
     {
         return view('nodes.show', [
            'item' => $this->docker->node()->inspect($id),
+            'tasks' => $this->docker->node()->ps($id),
         ]);
     }
 
