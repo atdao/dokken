@@ -37,6 +37,6 @@ class ServiceApi extends AbstractApi
      */
     public function ps(string $id)
     {
-        return collect($this->withFormat()->exec('ps', $id));
+        return collect($this->withFormat()->exec('ps', [$id, '--no-trunc']));
     }
 }

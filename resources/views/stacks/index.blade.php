@@ -20,7 +20,7 @@
                             <tbody>
                             @foreach ($items as $item)
                                 <tr>
-                                    <td><a href="#">{{ $item->Name }}</a>
+                                    <td><a href="{{ route('stacks.show', $item->Name) }}">{{ $item->Name }}</a>
                                     <td>{{ $item->Services }}</td>
                                     <td>{{ $item->Orchestrator }}</td>
                                 </tr>

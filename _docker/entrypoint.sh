@@ -14,6 +14,8 @@ function stop {
 trap stop SIGINT
 trap stop SIGQUIT
 
+touch /dokken/storage/logs/laravel.log
 chmod -R 777 /dokken/storage
 
-tail -F /var/log/nginx/error.log -F /var/log/nginx/access.log
+
+tail -F /var/log/nginx/error.log -F /var/log/nginx/access.log -F /dokken/storage/logs/laravel.log

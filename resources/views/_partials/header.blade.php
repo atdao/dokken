@@ -55,7 +55,7 @@
         </li>
         <li class="c-header-nav-item d-md-down-none mx-2">
             <div class="c-avatar pt-3">
-                <img class="c-avatar-img" src="{{ asset('assets/img/avatars/profil.jpg') }}">
+                <img class="c-avatar-img" src="{{ asset('assets/img/avatars/user.png') }}">
             </div>
         </li>
     </ul>

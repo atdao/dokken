@@ -40,12 +40,15 @@ class StackController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
+     * @param string $id
+     * @return void
      */
-    public function show($id)
+    public function show(string $id)
     {
-        //
+        return view('stacks.show', [
+            'stack' => $id,
+            'items' => $this->docker->stack()->services($id),
+        ]);
     }
 
     /**

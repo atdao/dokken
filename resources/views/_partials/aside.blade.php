@@ -1,7 +1,7 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand">
-        <h4 class="c-sidebar-brand-full mb-0">Dokken</h4>
-        <h4 class="c-sidebar-brand-minimized mb-0">D</h4>
+        <h4 class="c-sidebar-brand-full mb-0"><img src="{{ asset('assets/img/brand/logo.png') }}" height="30" /> Dokken</h4>
+        <img class="c-sidebar-brand-minimized mb-0" src="{{ asset('assets/img/brand/logo.png') }}" height="30" />
     </div>
     <ul class="c-sidebar-nav ps">
         <li class="c-sidebar-nav-item">
