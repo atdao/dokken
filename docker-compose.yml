@@ -1,18 +1,11 @@
 version: "3.7"
 
 services:
-  tunnel:
-    command: --no-autoupdate --loglevel error --url nginx --hostname somewhereovertherainbox-atnd.latoyapip.org
-    image: cloudflare/cloudflared
-    volumes:
-      - ./cert.pem:/etc/cloudflared/cert.pem
   dokken:
     image: dokken
     build:
       dockerfile: _docker/Dockerfile
       context: .
-#    environment:
-#      APP_URL: https://somewhereovertherainbox-atnd.latoyapip.org/tools/dokken/
     volumes:
       - ./app:/dokken/app
       - ./routes:/dokken/routes
@@ -22,18 +15,5 @@ services:
       - ./vendor:/dokken/vendor
       - /var/run/docker.sock:/var/run/docker.sock
       - ./.env:/dokken/.env
-#    ports:
-#      - 8080:80
-
-  nginx:
-    image: nginx
-    volumes:
-      - ./border.conf:/etc/nginx/conf.d/border.conf
-
-#  mysql:
-#    image: mariadb
-#    environment:
-#      MYSQL_DATABASE: laravel
-#      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-#    ports:
-#      - 3306:3306
+    ports:
+      - 8080:80
