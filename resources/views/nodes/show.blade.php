@@ -50,7 +50,7 @@
                             @if(isset($item->ManagerStatus))
                                 <tr>
                                     <td>Leader</td>
-                                    <td>{{ $item->ManagerStatus->Leader ? 'true' : 'false' }}</td>
+                                    <td>{{ isset($item->ManagerStatus->Leader) ? 'true' : 'false' }}</td>
                                 </tr>
                                 <tr>
                                     <td>ManagerStatus</td>
