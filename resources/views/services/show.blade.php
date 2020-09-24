@@ -49,6 +49,7 @@
                         </table>
                     </div>
                 </div>
+                @if(isset($item->Spec->TaskTemplate->ContainerSpec->Labels))
                 <div class="card mt-4">
                     <h4 class="card-header">Container labels</h4>
                     <div class="card-body">
@@ -64,6 +65,7 @@
                         </table>
                     </div>
                 </div>
+                @endif
                 @if (isset($item->Spec->TaskTemplate->ContainerSpec->Env))
                     <div class="card mt-4">
                         <h4 class="card-header">Environment variables</h4>

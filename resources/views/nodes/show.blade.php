@@ -47,14 +47,16 @@
                                 <td>IP</td>
                                 <td>{{ $item->Status->Addr }}</td>
                             </tr>
-                            <tr>
-                                <td>Leader</td>
-                                <td>{{ $item->ManagerStatus->Leader ? 'true' : 'false' }}</td>
-                            </tr>
-                            <tr>
-                                <td>ManagerStatus</td>
-                                <td>{{ $item->ManagerStatus->Reachability }}</td>
-                            </tr>
+                            @if(isset($item->ManagerStatus))
+                                <tr>
+                                    <td>Leader</td>
+                                    <td>{{ $item->ManagerStatus->Leader ? 'true' : 'false' }}</td>
+                                </tr>
+                                <tr>
+                                    <td>ManagerStatus</td>
+                                    <td>{{ $item->ManagerStatus->Reachability }}</td>
+                                </tr>
+                            @endif
                             </tbody>
                         </table>
                     </div>
