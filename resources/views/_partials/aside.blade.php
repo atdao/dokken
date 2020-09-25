@@ -1,7 +1,7 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand">
-        <h4 class="c-sidebar-brand-full mb-0"><img src="{{ asset('assets/img/brand/logo.png') }}" height="30" /> Dokken</h4>
-        <img class="c-sidebar-brand-minimized mb-0" src="{{ asset('assets/img/brand/logo.png') }}" height="30" />
+        <h4 class="c-sidebar-brand-full mb-0"><img src="{{ asset('assets/img/brand/logo.png') }}" height="30" /></h4>
+        <img class="c-sidebar-brand-minimized mb-0" src="{{ asset('assets/img/brand/logo2.png') }}" height="35" />
     </div>
     <ul class="c-sidebar-nav ps">
         <li class="c-sidebar-nav-item">
@@ -40,6 +40,7 @@
             </a>
         </li>
     </ul>
+    <div class="p-1 text-center text-muted">Ver. 0.1.5</div>
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
             data-class="c-sidebar-minimized"></button>
 </div>
