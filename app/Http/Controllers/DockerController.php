@@ -22,7 +22,6 @@ class DockerController extends Controller
 //        dd($this->docker->service()->ls());
 //        dd($this->docker->node()->ls());
 
-
         $client = new Client();
         $res = $client->request('GET', 'unix:///var/run/docker.sock/nodes/ls');
         var_dump($res);

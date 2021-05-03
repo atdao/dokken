@@ -41,6 +41,7 @@ COPY ./LICENSE /dokken/LICENSE
 COPY ./artisan /dokken/artisan
 
 RUN echo 'APP_KEY=base64:4/vSua5y/taCAqUs2Afd4OIT31WIYg6l5pNPiXU+T84=' > /dokken/.env
+RUN echo 'APP_MASKED_KEYWORDS=pass|cert|token|private|salt' >> /dokken/.env
 
 # to be generated
 #COPY ./.env /dokken/.env
