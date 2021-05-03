@@ -1,6 +1,6 @@
 #!/bin/bash
 
-env | grep 'APP_' | sed "s/\(.*\)=\(.*\)/env[\1]='\2'/" > /etc/php/7.4/fpm/env.conf
+env | grep 'APP_' | sed "s/\(.*\)=\(.*\)/env[\1]='\2'/" > /etc/php/7.4/fpm/env.conf && sed -i "s/\(.*\)=''//g" /etc/php/7.4/fpm/env.conf
 
 service php7.4-fpm start
 service nginx start

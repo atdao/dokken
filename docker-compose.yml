@@ -4,7 +4,7 @@ services:
   dokken:
     image: dokken
     build:
-      dockerfile: _docker/Dockerfile
+      dockerfile: Dockerfile
       context: .
     volumes:
       - ./app:/dokken/app

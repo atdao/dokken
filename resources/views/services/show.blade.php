@@ -74,9 +74,14 @@
                                 <tbody>
                                 @foreach($item->Spec->TaskTemplate->ContainerSpec->Env as $env)
                                     <tr>
-                                        @foreach(explode('=', $env) as $value)
-                                            <td>{{ $value }}</td>
-                                        @endforeach
+                                        @if($maskedKeywords != "" && preg_match("/($maskedKeywords)/i", $env))
+                                            <td>{{ explode('=', $env)[0] }}</td>
+                                            <td>[ masked ]</td>
+                                        @else
+                                            @foreach(explode('=', $env) as $value)
+                                                <td>{{ $value }}</td>
+                                            @endforeach
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>

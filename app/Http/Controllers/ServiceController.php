@@ -52,6 +52,7 @@ class ServiceController extends Controller
         return view('services.show', [
             'item' => $this->docker->service()->inspect($id),
             'tasks' => $this->docker->service()->ps($id),
+            'maskedKeywords' => getenv('APP_MASKED_KEYWORDS'),
         ]);
     }
 
