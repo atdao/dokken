@@ -1,6 +1,12 @@
-.c-header .form-control {
-  /*padding: 0.75rem 1rem;*/
-  /*border-width: 1px;*/
-  /*border-radius: 0;*/
+.content {
+    background-color: #ebedef;
+    overflow-y: auto;
 }
 
+.table a {
+    text-decoration: none;
+}
+
+.dataTables_wrapper {
+    width: 100%;
+}

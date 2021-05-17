@@ -1,10 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "atdao/dokken",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Docker Swarm Admin",
     "keywords": [
-        "framework",
-        "laravel"
+        "Docker",
+        "Swarm",
+        "Dokken",
+        "Admin"
     ],
     "license": "MIT",
     "require": {
