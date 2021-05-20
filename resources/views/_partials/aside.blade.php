@@ -1,46 +1,46 @@
-<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-    <div class="c-sidebar-brand">
-        <h4 class="c-sidebar-brand-full mb-0"><img src="{{ asset('assets/img/brand/logo.png') }}" height="30" /></h4>
-        <img class="c-sidebar-brand-minimized mb-0" src="{{ asset('assets/img/brand/logo2.png') }}" height="35" />
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+    <div class="text-center">
+        <a href="{{ route('home')  }}"
+           class="mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <img src="{{ asset('assets/img/brand/logo.png') }}" height="30"/>
+        </a>
     </div>
-    <ul class="c-sidebar-nav ps">
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('home') ? ' c-active' : '' }}"
-               href="{{ route('home') }}">
-                <i class="fas fa-home c-sidebar-nav-icon"></i>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="{{ route('home') }}"
+               class="nav-link {{ \Illuminate\Support\Facades\Route::is('home') ? 'active' : 'text-white' }}" aria-current="page">
+                <i class="me-2 bi-house-door-fill"></i>
                 Dashboard
             </a>
         </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('networks*') ? ' c-active' : '' }}"
-               href="{{ route('networks.index') }}">
-                <i class="fas fa-network-wired c-sidebar-nav-icon"></i>
+        <li class="nav-item">
+            <a href="{{ route('networks.index') }}"
+               class="nav-link {{ \Illuminate\Support\Facades\Route::is('networks*') ? 'active' : 'text-white' }}" aria-current="page">
+                <i class="me-2 bi-diagram-3-fill"></i>
                 Networks
             </a>
         </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('nodes*') ? ' c-active' : '' }}"
-               href="{{ route('nodes.index') }}">
-                <i class="fas fa-project-diagram c-sidebar-nav-icon"></i>
+        <li class="nav-item">
+            <a href="{{ route('nodes.index') }}"
+               class="nav-link {{ \Illuminate\Support\Facades\Route::is('nodes*') ? 'active' : 'text-white' }}" aria-current="page">
+                <i class="me-2 bi-share-fill"></i>
                 Nodes
             </a>
         </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('services*') ? ' c-active' : '' }}"
-               href="{{ route('services.index') }}">
-                <i class="fas fa-cogs c-sidebar-nav-icon"></i>
+        <li class="nav-item">
+            <a href="{{ route('services.index') }}"
+               class="nav-link {{ \Illuminate\Support\Facades\Route::is('services*') ? 'active' : 'text-white' }}" aria-current="page">
+                <i class="me-2 bi-puzzle-fill"></i>
                 Services
             </a>
         </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link{{ \Illuminate\Support\Facades\Route::is('stacks*') ? ' c-active' : '' }}"
-               href="{{ route('stacks.index') }}">
-                <i class="fas fa-layer-group c-sidebar-nav-icon"></i>
+        <li class="nav-item">
+            <a href="{{ route('stacks.index') }}"
+               class="nav-link {{ \Illuminate\Support\Facades\Route::is('stacks*') ? 'active' : 'text-white' }}" aria-current="page">
+                <i class="me-2 bi-stack"></i>
                 Stacks
             </a>
         </li>
     </ul>
-    <div class="p-1 text-center text-muted">Ver. 0.1.5</div>
-    <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
-            data-class="c-sidebar-minimized"></button>
 </div>

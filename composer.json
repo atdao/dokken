@@ -1,10 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "atdao/dokken",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Docker Swarm Admin",
     "keywords": [
-        "framework",
-        "laravel"
+        "Docker",
+        "Swarm",
+        "Dokken",
+        "Admin"
     ],
     "license": "MIT",
     "require": {
@@ -17,7 +19,7 @@
         "laravel/ui": "^3.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^v2.17.1",
+        "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^0.12.63",
         "facade/ignition": "^2.3.6",
         "fzaninotto/faker": "^1.9.1",
