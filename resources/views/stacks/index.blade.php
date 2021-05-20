@@ -9,9 +9,9 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th class="border-top-0">Name</th>
-                    <th class="border-top-0">Services</th>
-                    <th class="border-top-0">Orchestrator</th>
+                    <th>Name</th>
+                    <th>Services</th>
+                    <th>Orchestrator</th>
                 </tr>
                 </thead>
                 <tbody>

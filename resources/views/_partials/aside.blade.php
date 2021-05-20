@@ -43,8 +43,4 @@
             </a>
         </li>
     </ul>
-    <hr>
-    <div class="text-center text-muted">
-        Version 1.5.0
-    </div>
 </div>

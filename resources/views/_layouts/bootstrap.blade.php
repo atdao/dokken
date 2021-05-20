@@ -12,7 +12,6 @@
     @include('_partials.aside')
     <div class="container-fluid content">
         @yield('content')
-        @include('_partials.footer')
     </div>
 </main>
 

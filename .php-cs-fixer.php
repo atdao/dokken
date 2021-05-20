@@ -5,33 +5,26 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__ . '/routes')
     ->in(__DIR__ . '/tests');
 
-return PhpCsFixer\Config::create()
+$config = new PhpCsFixer\Config();
+return $config
     ->setRules([
-        '@PSR2'                            => true,
+        '@PSR12'                           => true,
         'no_blank_lines_after_phpdoc'      => true,
         'no_empty_phpdoc'                  => true,
         'no_unused_imports'                => true,
         'phpdoc_indent'                    => true,
-        'phpdoc_scalar'                    => true,
         'phpdoc_trim'                      => true,
+        'phpdoc_scalar'                    => true,
         'phpdoc_separation'                => true,
         'whitespace_after_comma_in_array'  => true,
-        'method_separation'                => true,
         'not_operator_with_space'          => true,
-        'no_extra_consecutive_blank_lines' => [
-            'tokens' => ['extra']
-        ],
+        'ordered_imports'                  => true,
         'concat_space' => [
             'spacing' => 'one'
-        ],
-        'binary_operator_spaces' => [
-            'align_double_arrow' => true
         ],
         'blank_line_before_statement' => [
             'statements' => ['break', 'continue', 'declare', 'return', 'throw', 'try', 'for', 'foreach', 'if', 'switch', 'do', 'while']
         ],
-        'ordered_imports' => [
-            'sortAlgorithm' => 'length'
-        ]
     ])
     ->setFinder($finder);
+

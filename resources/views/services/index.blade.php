@@ -23,7 +23,7 @@
                         <td><a href="{{ route('services.show', $item->ID) }}">{{ $item->ID }}</a>
                         <td>{{ $item->Name }}</td>
                         <td>{{ $item->Mode }}</td>
-                        <td>{{ $item->Mode == 'replicated' ? $item->Replicas  : '' }}</td>
+                        <td>{{ $item->Replicas }}</td>
                         <td>{{ $item->Ports }}</td>
                         <td>{{ $item->Image }}</td>
                     </tr>

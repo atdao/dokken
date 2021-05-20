@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+.table {
+    font-size: .875rem;
+}
+
 .dataTables_wrapper {
     width: 100%;
 }

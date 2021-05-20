@@ -62,7 +62,7 @@
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <h5 class="border-bottom pb-2 mb-0">Tasks</h5>
             <div class="d-flex text-muted pt-3">
-                <table class="table table-striped">
+                <table class="table table-striped table-sm data-table">
                     <thead>
                     <tr>
                         <th>ID</th>
@@ -71,6 +71,7 @@
                         <th>CurrentState</th>
                         <th>DesiredState</th>
                         <th>Error</th>
+                        <th>Image</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -82,6 +83,7 @@
                             <td>{{ $task->CurrentState }}</td>
                             <td>{{ $task->DesiredState }}</td>
                             <td>{{ $task->Error }}</td>
+                            <td>{{ $task->Image }}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -89,4 +91,16 @@
             </div>
         </div>
     @endif
+@endsection
+
+@section('javascript')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.data-table').DataTable({
+                "order": [[4, "asc"]],
+                "paging": false,
+                "info": false
+            });
+        });
+    </script>
 @endsection

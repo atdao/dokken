@@ -1,11 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NodeController;
-use App\Http\Controllers\StackController;
-use App\Http\Controllers\NetworkController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\NetworkController;
+use App\Http\Controllers\NodeController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\StackController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
